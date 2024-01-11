@@ -1,0 +1,137 @@
+[versions]
+androidGradlePlugin = "8.1.2"
+kotlin = "1.9.21"
+
+minSdk = "33"
+targetSdk = "34"
+
+activity = "1.8.1"
+fragment = "1.6.2"
+lifecycle = "2.6.2"
+navigation = "2.7.5"
+paging = "3.2.1"
+room = "2.6.1"
+
+cronet = "113.5672.61"
+core = "1.12.0"
+
+[libraries]
+# coreLibraryDesugaring
+android-desugarJdkLibs = "com.android.tools:desugar_jdk_libs:2.0.4"
+android-desugarJdkLibs-nio = "com.android.tools:desugar_jdk_libs_nio:2.0.4"
+
+# https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-coroutines-bom
+kotlinx-coroutines-bom = "org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.7.3"
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android" }
+kotlinx-coroutines-playservices = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services" }
+
+kotlinx-serialization-bom = "org.jetbrains.kotlinx:kotlinx-serialization-bom:1.6.2"
+kotlinx-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json" }
+
+androidx-core = "androidx.core:core-ktx:1.12.0"
+androidx-annotation = "androidx.annotation:annotation:1.7.0"
+androidx-appcompat = "androidx.appcompat:appcompat:1.6.1"
+
+# Activity
+androidx-activity = { module = "androidx.activity:activity-ktx", version.ref = "activity" }
+
+androidx-fragment = { module = "androidx.fragment:fragment-ktx", version.ref = "fragment" }
+
+# Layouts
+androidx-coordinatorlayout = "androidx.coordinatorlayout:coordinatorlayout:1.2.0"
+androidx-constraintlayout = "androidx.constraintlayout:constraintlayout:2.1.4"
+androidx-recyclerview = "androidx.recyclerview:recyclerview:1.3.2"
+
+# Paging
+androidx-paging-runtime = { module = "androidx.paging:paging-runtime", version.ref = "paging" }
+
+# Lifecycle
+androidx-lifecycle-livedata = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycle" }
+androidx-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+
+# Navigation
+androidx-navigation-fragment = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation" }
+androidx-navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigation" }
+
+# Data Store
+androidx-datastore = "androidx.datastore:datastore:1.0.0"
+
+# Room (for in-memory caching)
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+# ksp
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+androidx-room-common = { module = "androidx.room:room-common", version.ref = "room" }
+androidx-room-paging = { module = "androidx.room:room-paging", version.ref = "room" }
+
+com-google-android-material = "com.google.android.material:material:1.10.0"
+
+# Koin
+# https://insert-koin.io/docs/setup/koin#current-versions
+koin-bom = "io.insert-koin:koin-bom:3.5.1"
+koin-core = { module = "io.insert-koin:koin-core" }
+koin-core-coroutines = { module = "io.insert-koin:koin-core-coroutines" }
+koin-android = { module = "io.insert-koin:koin-android" }
+
+# Firebase SDK
+firebase-bom = "com.google.firebase:firebase-bom:32.6.0"
+#  for Google Analytics
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+#  for Firebase Authentication
+firebase-auth = { module = "com.google.firebase:firebase-auth" }
+#  for Cloud Firestore
+firebase-firestore = { module = "com.google.firebase:firebase-firestore" }
+
+# region Netwrok
+play-services-cronet = "com.google.android.gms:play-services-cronet:18.0.1"
+play-services-base = "com.google.android.gms:play-services-base:18.2.0"
+play-services-basement = "com.google.android.gms:play-services-basement:18.2.0"
+cronet-api = { module = "org.chromium.net:cronet-api", version.ref = "cronet" }
+cronet-fallback = { module = "org.chromium.net:cronet-fallback", version.ref = "cronet" }
+# endregion
+
+# Location
+play-services-location = "com.google.android.gms:play-services-location:21.0.1"
+
+# region Testing
+junit = "junit:junit:4.13.2"
+# androidTestImplementation
+androidx-test-junit = "androidx.test.ext:junit-ktx:1.1.5"
+androidx-test-espresso-core = "androidx.test.espresso:espresso-core:3.5.1"
+# debugImplementation
+androidx-fragment-test = { module = "androidx.fragment:fragment-testing", version.ref = "fragment" }
+# androidTestImplementation
+androidx-navigation-test = { module = "androidx.navigation:navigation-testing", version.ref = "navigation" }
+
+# Dependencies of the included build-logic
+android-gradlePlugin = { module = "com.android.tools.build:gradle", version.ref = "androidGradlePlugin" }
+kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+core = { group = "androidx.core", name = "core", version.ref = "core" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+# https://github.com/google/ksp/releases
+ksp = { id = "com.google.devtools.ksp", version = "1.9.21-1.0.15" }
+navigation-safeargs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
+# https://mvnrepository.com/artifact/com.google.gms/google-services?repo=google
+google-services = { id = "com.google.gms.google-services", version = "4.4.0" }
+protobuf = { id = "com.google.protobuf", version = "0.9.4" }
+
+[bundles]
+androidx-navigation = ["androidx-navigation-fragment", "androidx-navigation-ui"]
+play-services-cronet = [
+    "play-services-cronet",
+    "play-services-base",
+    "play-services-basement",
+    "cronet-api"
+]

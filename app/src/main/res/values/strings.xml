@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Weather App</string>
+    <string name="generic_text">%1$s</string>
+    <string name="min_temp">Min %1$s</string>
+    <string name="max_temp">Max %1$s</string>
+
+    <string name="uv_low">Low</string>
+    <string name="uv_moderate">Moderate</string>
+    <string name="uv_high">High</string>
+    <string name="uv_very_high">Very High</string>
+    <string name="uv_extreme">Extreme</string>
+    <string name="unknown">Unknown</string>
+</resources>
